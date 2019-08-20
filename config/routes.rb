@@ -6,12 +6,12 @@ Rails.application.routes.draw do
 
   # 1. Preferred
   # resources + only: or except:. Be mindful of what you're adding to the app!
-  resources :restaurants, only: [:index]
+  # resources :restaurants, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
   # 2. Yeah... that's ok...
   # If you actually realize during the lifetime of your app that you need
   # all 7 actions.
-  # resources :restaurants
+  resources :restaurants
 
   # 3. Last resort
   # IF and ONLY IF there's NO way to make the route work with resources

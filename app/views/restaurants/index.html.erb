@@ -1,8 +1,17 @@
 <ul>
   <% @restaurants.each do |restaurant| %>
     <li>
-      <%= restaurant.name %>
-      <small>(<%= restaurant.rating %>)</small>
+      <%#= link_to restaurant.name, restaurant_path(restaurant.id) %>
+      <%#= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%#= link_to restaurant.name, restaurant %>
+
+      <!-- Block variation of link_to -->
+      <%= link_to restaurant do %>
+        <%= restaurant.name %>
+        <small>(<%= restaurant.rating %>)</small>
+      <% end %>
+
     </li>
   <% end %>
 </ul>
+<%= link_to 'Add a Restaurant', new_restaurant_path %>
